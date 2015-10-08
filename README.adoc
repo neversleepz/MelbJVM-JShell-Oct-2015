@@ -1,0 +1,42 @@
+= JShell intro + news presentation at MelbJVM Oct 2015
+Kon Soulianidis <kon@melbjvm.com>
+
+These were the supporting files I used in my talk yesterday (7 Oct) to do the MelbJVM news presentation.
+
+I used `/open` command in JShell to load these into it.
+
+Getting JShell
+==============
+Download Java 9 ea release from https://jdk9.java.net/download/
+
+Using Build 253 of JShell (late september) with Java 9 build 82 from [AdoptJDK Jenkins server](https://adopt-openjdk.ci.cloudbees.com/view/OpenJDK/job/langtools-1.9-linux-x86_64-kulla-dev/253/)
+Newer builds have a bug that prevented it from starting.  Hopefully fixed soon.
+
+#### For the lazy
+```
+ # set your path + java home to version 9.
+ curl -o kulla.jar https://adopt-openjdk.ci.cloudbees.com/view/OpenJDK/job/langtools-1.9-linux-x86_64-kulla-dev/253/artifact/kulla-0.819-20150923010101.jar
+ java -jar kulla.jar
+```
+
+Then at the prompt I ran
+```
+/open src/AsciiArt.java
+/open src/Meetup.java
+/open src/News.java
+/open src/OctFifteen.java
+```
+
+They should load ok in that order but your milleage may vary depending on what build you grab.
+
+NB: they wont compile as standard Java files since the REPL imports a few things prior.
+
+References
+==========
+Look at https://java.net/downloads/adoptopenjdk/REPL_Tutorial.pdf
+
+These two blogs were also useful
+http://www.theserverside.com/tip/JShell-The-new-Java-9-REPL
+http://blog.takipi.com/java-9-early-access-a-hands-on-session-with-jshell-the-java-repl/
+
+Dont forget to check out the [JEP 222 homepage](http://openjdk.java.net/jeps/222) and the [kulla-dev mailing list](http://mail.openjdk.java.net/mailman/listinfo/kulla-dev)
